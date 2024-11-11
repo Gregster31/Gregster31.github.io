@@ -1,0 +1,10 @@
+{
+  "name": "Gregster31.github.io",
+  "scripts": {
+    "debug": "netlify dev --inspect"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.6.0"
+  }
+  
+}
