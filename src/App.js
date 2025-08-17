@@ -1,13 +1,8 @@
-import React from 'react';
-import Portfolio from './Portfolio.js';
-import './App.css';
+import Portfolio from './components/Portfolio.js';
+import './index.css';
 
 function App() {
-  return (
-    <div className="App">
-      <Portfolio />
-    </div>
-  );
+  return <Portfolio />;
 }
 
 export default App;
