@@ -47,11 +47,12 @@ const Portfolio = () => {
   }, []);
 
   const downloadResume = () => {
-    // Create a link to your actual resume PDF file
-    const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/resume.pdf`; // Use PUBLIC_URL for GitHub Pages
-    link.download = 'Julien_Blockchain_Developer_Resume.pdf';
-    link.click();
+    // Temporarily disabled - add your resume.pdf to public folder to enable
+    alert('Resume download will be available once resume.pdf is added to the public folder');
+    // const link = document.createElement('a');
+    // link.href = `${process.env.PUBLIC_URL}/resume.pdf`;
+    // link.download = 'Julien_Blockchain_Developer_Resume.pdf';
+    // link.click();
   };
 
   const StarField = () => {
