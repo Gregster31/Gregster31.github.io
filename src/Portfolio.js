@@ -29,7 +29,9 @@ const Portfolio = () => {
     );
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      observerRef.current.disconnect();
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
     };
   }, []);
   
@@ -37,13 +39,17 @@ const Portfolio = () => {
     const elements = document.querySelectorAll('[data-animate]');
     elements.forEach(el => observerRef.current?.observe(el));
     
-    return () => observerRef.current?.disconnect();
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
 
   const downloadResume = () => {
     // Create a link to your actual resume PDF file
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Place your resume.pdf in the public folder
+    link.href = `${process.env.PUBLIC_URL}/resume.pdf`; // Use PUBLIC_URL for GitHub Pages
     link.download = 'Julien_Blockchain_Developer_Resume.pdf';
     link.click();
   };
@@ -108,7 +114,7 @@ const Portfolio = () => {
 
   const projects = [
     {
-      name: 'DeFi-Protocol',
+      name: 'DeFi Protocol',
       tech: 'Solidity • React • Ethers.js',
       link: 'https://github.com/yourusername/defi-protocol'
     },
@@ -124,6 +130,14 @@ const Portfolio = () => {
     }
   ];
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="bg-black text-white min-h-screen relative">
       <StarField />
@@ -135,9 +149,9 @@ const Portfolio = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8 text-sm">
-            <a href="#about" className="text-gray-400 hover:text-white transition-colors">ABOUT</a>
-            <a href="#stack" className="text-gray-400 hover:text-white transition-colors">STACK</a>
-            <a href="#projects" className="text-gray-400 hover:text-white transition-colors">PROJECTS</a>
+            <button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors">ABOUT</button>
+            <button onClick={() => scrollToSection('stack')} className="text-gray-400 hover:text-white transition-colors">STACK</button>
+            <button onClick={() => scrollToSection('projects')} className="text-gray-400 hover:text-white transition-colors">PROJECTS</button>
             <button
               onClick={downloadResume}
               className="bg-red-500 bg-opacity-20 border border-red-500 border-opacity-50 text-red-400 px-4 py-2 text-xs font-mono hover:bg-opacity-30 transition-all"
@@ -157,9 +171,9 @@ const Portfolio = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-black bg-opacity-95 backdrop-blur-sm border-t border-gray-800">
             <div className="px-6 py-4 space-y-4">
-              <a href="#about" className="block text-gray-400 hover:text-white transition-colors">ABOUT</a>
-              <a href="#stack" className="block text-gray-400 hover:text-white transition-colors">STACK</a>
-              <a href="#projects" className="block text-gray-400 hover:text-white transition-colors">PROJECTS</a>
+              <button onClick={() => scrollToSection('about')} className="block text-left text-gray-400 hover:text-white transition-colors">ABOUT</button>
+              <button onClick={() => scrollToSection('stack')} className="block text-left text-gray-400 hover:text-white transition-colors">STACK</button>
+              <button onClick={() => scrollToSection('projects')} className="block text-left text-gray-400 hover:text-white transition-colors">PROJECTS</button>
               <button
                 onClick={downloadResume}
                 className="bg-red-500 bg-opacity-20 border border-red-500 border-opacity-50 text-red-400 px-4 py-2 text-xs font-mono hover:bg-opacity-30 transition-all"
@@ -207,17 +221,16 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="font-mono text-sm text-gray-300">
-        <div className="text-purple-400 mb-2">contract BlockchainSkills &#123;</div>
-        <div className="pl-4 text-green-400 mb-1">
-            string public expertise = <span className="text-yellow-300">"Proficient in Solidity, Ethers.js, and smart contract development"</span>;
+        <div className="font-mono text-sm text-gray-300 max-w-4xl mx-auto mt-16">
+          <div className="text-purple-400 mb-2">contract BlockchainSkills &#123;</div>
+          <div className="pl-4 text-green-400 mb-1">
+              string public expertise = <span className="text-yellow-300">"Proficient in Solidity, Ethers.js, and smart contract development"</span>;
+          </div>
+          <div className="pl-4 text-green-400 mb-2">
+              string public mission = <span className="text-yellow-300">"Continuously optimizing and deploying secure, efficient, and scalable decentralized applications"</span>;
+          </div>
+          <div className="text-purple-400">&#125;</div>
         </div>
-        <div className="pl-4 text-green-400 mb-2">
-            string public mission = <span className="text-yellow-300">"Continuously optimizing and deploying secure, efficient, and scalable decentralized applications"</span>;
-        </div>
-        <div className="text-purple-400">&#125;</div>
-        </div>
-
       </section>
 
       <section id="about" className="py-20 px-6">
@@ -311,7 +324,7 @@ const Portfolio = () => {
             >
               <h3 className="text-gray-300 text-lg font-bold mb-6">FRONTEND</h3>
               <div className="space-y-4">
-                {techStack.frontend.map((tech, index) => (
+                {techStack.frontend.map((tech) => (
                   <div key={tech.name} className="flex items-center space-x-3">
                     <span className="text-xl">{tech.icon}</span>
                     <span className={`${tech.color} font-medium`}>{tech.name}</span>
@@ -329,7 +342,7 @@ const Portfolio = () => {
             >
               <h3 className="text-gray-300 text-lg font-bold mb-6">BACKEND</h3>
               <div className="space-y-4">
-                {techStack.backend.map((tech, index) => (
+                {techStack.backend.map((tech) => (
                   <div key={tech.name} className="flex items-center space-x-3">
                     <span className="text-xl">{tech.icon}</span>
                     <span className={`${tech.color} font-medium`}>{tech.name}</span>
@@ -339,23 +352,22 @@ const Portfolio = () => {
             </div>
 
             <div 
-            className={`transition-all duration-1000 ease-out delay-300 ${
+              className={`transition-all duration-1000 ease-out delay-300 ${
                 visibleElements.has('tools-stack') ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-            }`}
-            data-animate
-            id="tools-stack"
+              }`}
+              data-animate
+              id="tools-stack"
             >
-            <h3 className="text-gray-300 text-lg font-bold mb-6">TOOLS</h3>
-            <div className="space-y-4">
-                {techStack.tools.map((tech, index) => (
-                <div key={tech.name} className="flex items-center space-x-3">
+              <h3 className="text-gray-300 text-lg font-bold mb-6">TOOLS</h3>
+              <div className="space-y-4">
+                {techStack.tools.map((tech) => (
+                  <div key={tech.name} className="flex items-center space-x-3">
                     <span className="text-xl">{tech.icon}</span>
-                    <span className={`${tech.color} font-medium`}>{tech.name}</span> {/* <-- fixed */}
-                </div>
+                    <span className={`${tech.color} font-medium`}>{tech.name}</span>
+                  </div>
                 ))}
+              </div>
             </div>
-            </div>
-
 
             <div 
               className={`transition-all duration-1000 ease-out delay-400 ${
@@ -366,7 +378,7 @@ const Portfolio = () => {
             >
               <h3 className="text-gray-300 text-lg font-bold mb-6">STUDYING</h3>
               <div className="space-y-4">
-                {techStack.studying.map((tech, index) => (
+                {techStack.studying.map((tech) => (
                   <div key={tech.name} className="flex items-center space-x-3">
                     <span className="text-xl">{tech.icon}</span>
                     <span className={`${tech.color} font-medium`}>{tech.name}</span>
