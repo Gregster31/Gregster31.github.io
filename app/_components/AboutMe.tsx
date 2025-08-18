@@ -55,9 +55,9 @@ const AboutMe = () => {
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    I believe in a user centered design approach, ensuring that
-                    every project I work on is tailored to meet the specific
-                    needs of its users.
+                    I believe in building the decentralized future, creating 
+                    blockchain solutions that empower users and revolutionize 
+                    how we interact with technology.
                 </h2>
 
                 <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
@@ -67,24 +67,24 @@ const AboutMe = () => {
                 <div className="grid md:grid-cols-12 mt-9">
                     <div className="md:col-span-5">
                         <p className="text-5xl slide-up-and-fade">
-                            Hi, I&apos;m Tajmirul.
+                            Hi, I&apos;m Julien.
                         </p>
                     </div>
                     <div className="md:col-span-7">
                         <div className="text-lg text-muted-foreground max-w-[450px]">
                             <p className="slide-up-and-fade">
-                                I&apos;m a frontend web developer dedicated to
-                                turning ideas into creative solutions. I
-                                specialize in creating seamless and intuitive
-                                user experiences.
+                                I&apos;m a blockchain developer passionate about 
+                                Web3 technologies and decentralized systems. 
+                                Currently pursuing Computer Science at Concordia 
+                                University while building the future of finance 
+                                and digital ownership.
                             </p>
                             <p className="mt-3 slide-up-and-fade">
-                                My approach focuses on creating scalable,
-                                high-performing solutions tailored to both user
-                                needs and business objectives. By prioritizing
-                                performance, accessibility, and responsiveness,
-                                I strive to deliver experiences that not only
-                                engage users but also drive tangible results.
+                                My expertise spans smart contract development, 
+                                mobile applications, and full-stack Web3 solutions. 
+                                I focus on creating secure, scalable blockchain 
+                                applications that solve real-world problems, from 
+                                DeFi platforms to voting systems and beyond.
                             </p>
                         </div>
                     </div>

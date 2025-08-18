@@ -29,8 +29,20 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    title: 'Portfolio - Tajmirul Islam',
-    description: 'Personal portfolio of Tajmirul Islam',
+    title: 'Portfolio - Julien Halde | Blockchain Developer',
+    description: 'Blockchain Developer specializing in Web3 technologies, smart contracts, and decentralized applications. Computer Science student at Concordia University.',
+    keywords: 'blockchain developer, web3, smart contracts, solidity, ethereum, react, typescript, julien halde',
+    authors: [{ name: 'Julien Halde' }],
+    openGraph: {
+        title: 'Julien Halde - Blockchain Developer',
+        description: 'Building the decentralized future with Web3 technologies',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Julien Halde - Blockchain Developer',
+        description: 'Building the decentralized future with Web3 technologies',
+    },
 };
 
 export default function RootLayout({
@@ -40,17 +52,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <GoogleAnalytics gaId="G-MHLY1LNGY5" />
-            <Script id="hotjar" strategy="afterInteractive">
-                {`(function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:6380611,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-            </Script>
+            {/* Remove or update Google Analytics ID when you have your own */}
             <body
                 className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
             >
@@ -61,15 +63,6 @@ export default function RootLayout({
                         duration: 1.4,
                     }}
                 >
-                    {/* <a
-                        href="https://forms.gle/t73XYJgWD5cJNr6e8"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 block bg-black text-center z-[1] text-sm py-2 hover:text-primary transition-all"
-                    >
-                        Frontend dev? I&apos;ll help you polish your resume —
-                        completely free.
-                    </a> */}
                     <Navbar />
                     <main>{children}</main>
                     <Footer />

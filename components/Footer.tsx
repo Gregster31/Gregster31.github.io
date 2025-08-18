@@ -7,22 +7,34 @@ interface RepoStats {
 }
 
 const Footer = async () => {
-    const repoStats = await fetch(
-        'https://api.github.com/repos/tajmirul/portfolio-2.0',
-        {
-            next: {
-                revalidate: 60 * 60, // 1 hour
-            },
-        },
-    );
+    // You'll need to update this URL to point to your GitHub repo
+    let stargazers_count = 0;
+    let forks_count = 0;
 
-    const { stargazers_count, forks_count } =
-        (await repoStats.json()) as RepoStats;
+    try {
+        const repoStats = await fetch(
+            'https://api.github.com/repos/YourGithubUsername/your-portfolio-repo', // Update this
+            {
+                next: {
+                    revalidate: 60 * 60, // 1 hour
+                },
+            },
+        );
+
+        if (repoStats.ok) {
+            const data = (await repoStats.json()) as RepoStats;
+            stargazers_count = data.stargazers_count;
+            forks_count = data.forks_count;
+        }
+    } catch (error) {
+        // Fallback if API fails
+        console.log('Could not fetch repo stats');
+    }
 
     return (
         <footer className="text-center pb-5" id="contact">
             <div className="container">
-                <p className="text-lg">Have a project in mind?</p>
+                <p className="text-lg">Have a blockchain project in mind?</p>
                 <a
                     href={`mailto:${GENERAL_INFO.email}`}
                     className="text-3xl sm:text-4xl font-anton inline-block mt-5 mb-10 hover:underline"
@@ -31,36 +43,19 @@ const Footer = async () => {
                 </a>
 
                 <div className="">
-                    <a
-                        href="https://github.com/Tajmirul/portfolio-2.0"
-                        target="_blank"
-                        className="leading-none text-muted-foreground hover:underline hover:text-white"
-                    >
-                        Design & built by Tajmirul Islam
-                        <div className="flex items-center justify-center gap-5 pt-1">
-                            <span className="flex items-center gap-2">
-                                <Star size={18} /> {stargazers_count}
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <GitFork size={18} /> {forks_count}
-                            </span>
-                        </div>
-                    </a>
-
-                    {/* Note: If you are not Tajmirul, use this copyright message instead */}
-                    {/* <a href='https://www.me.toinfinite.dev/' className="leading-none text-muted-foreground hover:underline hover:text-white">
-                        Design & built by Tajmirul Islam <br />
-                        Revised by YOUR NAME
-
-                        <div className="flex items-center justify-center gap-5 pt-1">
-                            <span className='flex items-center gap-2'>
-                                <Star size={14} /> {stargazers_count}
-                            </span>
-                            <span className='flex items-center gap-2'>
-                                <GitFork size={14} /> {forks_count}
-                            </span>
-                        </div>
-                    </a> */}
+                    <div className="leading-none text-muted-foreground">
+                        Built by Julien Halde
+                        {(stargazers_count > 0 || forks_count > 0) && (
+                            <div className="flex items-center justify-center gap-5 pt-2">
+                                <span className="flex items-center gap-2">
+                                    <Star size={18} /> {stargazers_count}
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <GitFork size={18} /> {forks_count}
+                                </span>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </footer>

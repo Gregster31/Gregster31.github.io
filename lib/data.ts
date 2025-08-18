@@ -1,23 +1,56 @@
 import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
-
-    emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
-
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    email: 'julien.halde@example.com', // Replace with your actual email
+    
+    emailSubject: "Let's collaborate on a blockchain project",
+    emailBody: 'Hi Julien, I am reaching out to you because...',
+    
+    oldPortfolio: 'https://www.legacy.julienhalde.dev', // Update when you have one
+    upworkProfile: 'https://www.upwork.com/freelancers/julienhalde', // Update if you have one
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
+    { name: 'github', url: 'https://github.com/YourGithubUsername' }, // Replace with your GitHub
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/julien-halde' }, // Replace with your LinkedIn
+    { name: 'twitter', url: 'https://twitter.com/YourTwitter' }, // Replace with your Twitter if you have one
 ];
 
 export const MY_STACK = {
+    'blockchain & web3': [
+        {
+            name: 'Solidity',
+            icon: '/logo/solidity.png', // You'll need to add this logo
+        },
+        {
+            name: 'Ethereum',
+            icon: '/logo/ethereum.png', // You'll need to add this logo
+        },
+        {
+            name: 'Hardhat',
+            icon: '/logo/hardhat.png', // You'll need to add this logo
+        },
+        {
+            name: 'Ethers.js',
+            icon: '/logo/ethers.png', // You'll need to add this logo
+        },
+        {
+            name: 'Wagmi',
+            icon: '/logo/wagmi.png', // You'll need to add this logo
+        },
+        {
+            name: 'Viem',
+            icon: '/logo/viem.png', // You'll need to add this logo
+        },
+        {
+            name: 'RainbowKit',
+            icon: '/logo/rainbowkit.png', // You'll need to add this logo
+        },
+        {
+            name: 'MetaMask',
+            icon: '/logo/metamask.png', // You'll need to add this logo
+        },
+    ],
     frontend: [
         {
             name: 'JavaScript',
@@ -32,64 +65,48 @@ export const MY_STACK = {
             icon: '/logo/react.png',
         },
         {
-            name: 'Next.js',
-            icon: '/logo/next.png',
-        },
-        {
-            name: 'Redux',
-            icon: '/logo/redux.png',
-        },
-        {
             name: 'Tailwind CSS',
             icon: '/logo/tailwind.png',
         },
-        {
-            name: 'GSAP',
-            icon: '/logo/gsap.png',
-        },
-        {
-            name: 'Framer Motion',
-            icon: '/logo/framer-motion.png',
-        },
-        {
-            name: 'Sass',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
-        },
     ],
-    backend: [
+    'mobile & backend': [
         {
-            name: 'Node.js',
-            icon: '/logo/node.png',
+            name: 'Kotlin',
+            icon: '/logo/kotlin.png', // You'll need to add this logo
         },
         {
-            name: 'NestJS',
-            icon: '/logo/nest.svg',
+            name: 'Swift',
+            icon: '/logo/swift.png', // You'll need to add this logo
         },
         {
-            name: 'Express.js',
-            icon: '/logo/express.png',
+            name: 'Java',
+            icon: '/logo/java.png', // You'll need to add this logo
+        },
+        {
+            name: 'Python',
+            icon: '/logo/python.png', // You'll need to add this logo
+        },
+        {
+            name: 'C#',
+            icon: '/logo/csharp.png', // You'll need to add this logo
+        },
+        {
+            name: 'Firebase',
+            icon: '/logo/firebase.png', // You'll need to add this logo
         },
     ],
     database: [
-        {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
-        },
         {
             name: 'PostgreSQL',
             icon: '/logo/postgreSQL.png',
         },
         {
-            name: 'MongoDB',
-            icon: '/logo/mongodb.svg',
+            name: 'MySQL',
+            icon: '/logo/mysql.svg',
         },
         {
-            name: 'Prisma',
-            icon: '/logo/prisma.png',
+            name: 'SQLite',
+            icon: '/logo/sqlite.png', // You'll need to add this logo
         },
     ],
     tools: [
@@ -102,207 +119,189 @@ export const MY_STACK = {
             icon: '/logo/docker.svg',
         },
         {
-            name: 'AWS',
-            icon: '/logo/aws.png',
+            name: 'Azure DevOps',
+            icon: '/logo/azure.png', // You'll need to add this logo
         },
     ],
 };
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'MTI Electronics',
-        slug: 'mti-electronics',
-        liveUrl: 'https://mti-electronics.vercel.app/',
+        title: 'GeniePay',
+        slug: 'geniepay',
         year: 2025,
         description: `
-      A complete agency portfolio platform built for MTI Electronics to showcase their services, blog content, and product offerings. <br/> <br/>
+      A revolutionary crypto payroll platform designed to transform how companies handle employee payments. Built on Ethereum, GeniePay enables instant, tax-conscious payouts to 1,000+ employees in a single transaction using smart contracts. <br/> <br/>
       
       Key Features:<br/>
       <ul>
-        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
-        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
-        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
-        <li>📱 Fully Responsive: Optimized for all device sizes</li>
-        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
+        <li>💰 Multi-Currency Support: USDC, DAI, ETH, and fiat integration</li>
+        <li>📊 Team Management Dashboard: Comprehensive web interface for HR teams</li>
+        <li>🧾 Automatic Invoice Generation: Simplified accounting and reporting</li>
+        <li>⚡ Bulk Transactions: Process thousands of payments in one transaction</li>
+        <li>🔒 Smart Contract Security: Immutable and transparent payment logic</li>
       </ul><br/>
       
       Technical Highlights:
       <ul>
-        <li>Implemented complex slider synchronization logic using Swiper.js</li>
-        <li>Customized Payload CMS admin panel for intuitive content management</li>
-        <li>Developed reusable UI components with shadcn for design consistency</li>
-        <li>Configured efficient data fetching strategies in Next.js</li>
+        <li>Developed custom smart contracts for efficient batch payments</li>
+        <li>Implemented Wagmi and Viem for seamless Web3 integration</li>
+        <li>Built responsive React dashboard with TypeScript</li>
+        <li>Integrated RainbowKit for enhanced wallet connectivity</li>
       </ul>
       `,
         role: `
-      Full-Stack Developer <br/>
-      Owned the entire development lifecycle:
+      Full-Stack Blockchain Developer <br/>
+      Leading the entire development process:
       <ul>
-        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
-        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
-        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
-        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
-        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
-        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
+        <li>🔗 Smart Contracts: Designed and deployed Solidity contracts on Ethereum</li>
+        <li>⚛️ Frontend: Built React dashboard with TypeScript and Tailwind CSS</li>
+        <li>🌐 Web3 Integration: Implemented wallet connections and blockchain interactions</li>
+        <li>💾 Backend: Set up Firebase for user management and data storage</li>
+        <li>📱 UX/UI: Created intuitive interfaces for complex financial operations</li>
       </ul>
       `,
         techStack: [
-            'Next.js',
-            'Payload CMS',
+            'React',
+            'TypeScript',
+            'Wagmi',
+            'Viem',
+            'RainbowKit',
+            'Solidity',
+            'Ethereum',
+            'Firebase',
             'Tailwind CSS',
-            'shadcn',
-            'Swiper.js',
-            'React Hook Form',
-            'Vercel',
         ],
-        thumbnail: '/projects/thumbnail/mti-electronics.webp',
-        longThumbnail: '/projects/long/mti-electronics.webp',
+        thumbnail: '/projects/thumbnail/geniepay.webp', // You'll need to add project images
+        longThumbnail: '/projects/long/geniepay.webp',
         images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
+            '/projects/images/geniepay-1.webp',
+            '/projects/images/geniepay-2.webp',
+            '/projects/images/geniepay-3.webp',
         ],
     },
     {
-        title: 'Epikcart',
-        slug: 'epikcart',
+        title: 'BlockVote',
+        slug: 'blockvote',
+        year: 2025,
+        description: `
+      A decentralized voting application built for the Easy-A Hackathon at Consensus 2025 in Toronto. BlockVote ensures transparent, tamper-proof elections using blockchain technology. <br/> <br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🗳️ Tamper-Proof Voting: Immutable vote storage on Ethereum</li>
+        <li>🔐 MetaMask Authentication: Secure wallet-based user verification</li>
+        <li>📊 Live Vote Tracking: Real-time vote counts and results</li>
+        <li>👥 On-Chain Candidate Management: Decentralized candidate listings</li>
+        <li>📱 Responsive Design: Mobile-friendly voting interface</li>
+      </ul><br/>
+      
+      Technical Implementation:
+      <ul>
+        <li>Smart contracts handle all voting logic and data storage</li>
+        <li>Hardhat development environment for testing and deployment</li>
+        <li>Ethers.js for blockchain interaction and event listening</li>
+        <li>React frontend with Vite for optimal performance</li>
+      </ul>
+      `,
+        role: `
+      Blockchain Developer <br/>
+      Built the complete DApp during the hackathon:
+      <ul>
+        <li>📜 Smart Contracts: Developed voting logic in Solidity</li>
+        <li>🔧 Development Setup: Configured Hardhat for local testing</li>
+        <li>⚛️ Frontend: Created React interface with TypeScript</li>
+        <li>🔗 Web3 Integration: Connected frontend to smart contracts</li>
+        <li>🚀 Deployment: Deployed to Ethereum Sepolia testnet</li>
+      </ul>
+      `,
         techStack: [
             'React',
-            'Redux',
-            'React i18n',
-            'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
+            'Vite',
+            'TypeScript',
+            'Solidity',
+            'Hardhat',
+            'Ethers.js',
+            'MetaMask',
+            'Ethereum',
         ],
-        thumbnail: '/projects/thumbnail/epikcart.jpg',
-        longThumbnail: '/projects/long/epikcart.jpg',
+        thumbnail: '/projects/thumbnail/blockvote.webp', // You'll need to add project images
+        longThumbnail: '/projects/long/blockvote.webp',
         images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
+            '/projects/images/blockvote-1.webp',
+            '/projects/images/blockvote-2.webp',
+            '/projects/images/blockvote-3.webp',
         ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
+        sourceCode: 'https://github.com/YourGithubUsername/blockvote', // Replace with actual repo
     },
     {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
+        title: 'ChargeHub Mobile',
+        slug: 'chargehub-mobile',
+        year: 2025,
+        description: `
+      Enhanced mobile application features for ChargeHub, a leading electric vehicle charging network platform. Contributed to both Android and iOS development while improving user experience and security. <br/> <br/>
+      
+      Key Contributions:<br/>
+      <ul>
+        <li>📱 Cross-Platform Development: Built features for both Android (Kotlin) and iOS (Swift)</li>
+        <li>🔒 Security Research: Reverse-engineered Android SDKs to identify vulnerabilities</li>
+        <li>🐛 Bug Reporting: Eliminated empty user submissions through improved systems</li>
+        <li>📦 Release Management: Handled app versioning and Play Store releases</li>
+        <li>🎨 Modern UI: Implemented Jetpack Compose and SwiftUI interfaces</li>
+      </ul><br/>
+      
+      Technical Focus:
+      <ul>
+        <li>Native Android development with Kotlin and Jetpack Compose</li>
+        <li>iOS development using Swift with both UIKit and SwiftUI</li>
+        <li>Security analysis and vulnerability documentation</li>
+        <li>Play Store release cycle management</li>
+      </ul>
+      `,
+        role: `
+      Software Developer (Mobile) <br/>
+      Professional role at ChargeHub:
+      <ul>
+        <li>📱 Mobile Development: Built Android features with Kotlin (Jetpack Compose)</li>
+        <li>🍎 iOS Development: Created iOS features with Swift (UIKit & SwiftUI)</li>
+        <li>🔍 Security Research: Reverse-engineered SDKs for vulnerability assessment</li>
+        <li>🛠️ System Improvement: Enhanced bug-reporting to reduce empty submissions</li>
+        <li>🚀 Release Management: Managed Google Play Store releases and versioning</li>
+      </ul>
+      `,
         techStack: [
-            'GPT-4',
-            'Next.js',
-            'Postgressql',
-            'Prisma',
-            'Tailwind CSS',
+            'Kotlin',
+            'Swift',
+            'Jetpack Compose',
+            'SwiftUI',
+            'UIKit',
+            'Android SDK',
+            'iOS SDK',
+            'Google Play Console',
         ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
+        thumbnail: '/projects/thumbnail/chargehub.webp', // You'll need to add project images
+        longThumbnail: '/projects/long/chargehub.webp',
         images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
+            '/projects/images/chargehub-1.webp',
+            '/projects/images/chargehub-2.webp',
         ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
-    },
-    {
-        title: 'Real Estate',
-        slug: 'property-pro',
-        techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
-        ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
-    },
-    {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
-    },
-    {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
-
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
     },
 ];
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'Software Developer',
+        company: 'ChargeHub',
+        duration: 'Winter 2025 - Summer 2025',
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
+        title: 'Translator',
+        company: 'Ethereum Foundation',
+        duration: 'Summer 2025',
     },
     {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
-    },
-    {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        title: 'Head Coach',
+        company: 'CAVIP Swimming Club',
+        duration: 'Summer 2023',
     },
 ];
