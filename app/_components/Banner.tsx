@@ -40,54 +40,57 @@ const Banner = () => {
                 className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
                 ref={containerRef}
             >
-                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
+                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[600px]">
                     <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
-                        <span className="text-primary">BLOCKCHAIN</span>
-                        <br /> <span className="ml-4">DEVELOPER</span>
+                        <span className="text-primary glow-orange">BLOCKCHAIN</span>
+                        <br /> <span className="ml-4 gradient-text">ARCHITECT</span>
                     </h1>
-                    <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
+                    <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground leading-relaxed">
                         Hi! I&apos;m{' '}
-                        <span className="font-medium text-foreground">
-                            Julien
+                        <span className="font-medium text-primary">
+                            Julien Halde
                         </span>
-                        . A passionate Blockchain Developer and Computer Science 
-                        student building the decentralized future with Web3 
-                        technologies and smart contracts.
+                        . A visionary Blockchain Developer and Computer Science 
+                        student building the next generation of decentralized finance,
+                        Web3 infrastructure, and smart contract systems that will 
+                        reshape global economics.
                     </p>
-                    <Button
-                        as="link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={`mailto:${GENERAL_INFO.email}`}
-                        variant="primary"
-                        className="mt-9 banner-button slide-up-and-fade"
-                    >
-                        Get In Touch
-                    </Button>
+                    <div className="flex gap-4 mt-9 slide-up-and-fade">
+                        <Button
+                            as="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={GENERAL_INFO.resumeUrl}
+                            variant="primary"
+                            className="banner-button button-glow"
+                        >
+                            View Resume
+                        </Button>
+                    </div>
                 </div>
 
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            2+
+                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5 glow-orange">
+                            $2M+
                         </h5>
                         <p className="text-muted-foreground">
-                            Years Building
+                            TVL Managed
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            5+
+                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5 glow-orange">
+                            15+
                         </h5>
                         <p className="text-muted-foreground">
-                            Projects Completed
+                            Smart Contracts
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
+                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5 glow-orange">
                             Web3
                         </h5>
-                        <p className="text-muted-foreground">Focused</p>
+                        <p className="text-muted-foreground">Pioneer</p>
                     </div>
                 </div>
             </div>

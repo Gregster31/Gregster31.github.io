@@ -9,9 +9,9 @@ export default function Home() {
         <div className="page-">
             <Banner />
             <AboutMe />
-            <Skills />
             <Experiences />
             <ProjectList />
+            <Skills />
         </div>
     );
 }

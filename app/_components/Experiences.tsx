@@ -54,20 +54,37 @@ const Experiences = () => {
     return (
         <section className="py-section" id="my-experience">
             <div className="container" ref={containerRef}>
-                <SectionTitle title="My Experience" />
+                <SectionTitle title="Professional Experience" />
 
-                <div className="grid gap-14">
+                <div className="grid gap-16">
                     {MY_EXPERIENCE.map((item) => (
                         <div key={item.title} className="experience-item">
-                            <p className="text-xl text-muted-foreground">
-                                {item.company}
-                            </p>
-                            <p className="text-5xl font-anton leading-none mt-3.5 mb-2.5">
-                                {item.title}
-                            </p>
-                            <p className="text-lg text-muted-foreground">
-                                {item.duration}
-                            </p>
+                            <div className="flex items-start justify-between mb-4 flex-wrap gap-4">
+                                <div>
+                                    <p className="text-xl text-primary font-medium">
+                                        {item.company}
+                                    </p>
+                                    <p className="text-4xl md:text-5xl font-anton leading-none mt-2 mb-2">
+                                        {item.title}
+                                    </p>
+                                    <p className="text-lg text-muted-foreground">
+                                        {item.duration}
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            {item.description && (
+                                <div className="mt-6">
+                                    <ul className="space-y-3">
+                                        {item.description.map((desc, index) => (
+                                            <li key={index} className="flex items-start gap-3 text-muted-foreground">
+                                                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                                                <span className="leading-relaxed">{desc}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
