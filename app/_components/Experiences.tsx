@@ -52,7 +52,7 @@ const Experiences = () => {
     );
 
     return (
-        <section className="py-section" id="my-experience">
+        <section className="py-16" id="my-experience">
             <div className="container" ref={containerRef}>
                 <SectionTitle title="Professional Experience" />
 

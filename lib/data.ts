@@ -3,7 +3,7 @@ import { IProject } from '@/types';
 export const GENERAL_INFO = {
     email: 'julien.halde31@proton.me',
 
-    resumeUrl: '../public/Julien_Halde_Resume.pdf', // Add your resume PDF to public folder
+    resumeUrl: '/Julien_Halde_Resume.pdf', // Fixed path to public folder
     githubProfile: 'https://github.com/julien-halde',
 };
 
@@ -20,11 +20,11 @@ export const MY_STACK = {
         },
         {
             name: 'Ethereum',
-            icon: 'https://cryptologos.cc/logos/ethereum-eth-logo.svg',
+            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png',
         },
         {
             name: 'Hardhat',
-            icon: 'https://seeklogo.com/images/H/hardhat-logo-888739EBB4-seeklogo.com.png',
+            icon: 'https://hardhat.org/hardhat-logo.svg',
         },
         {
             name: 'Wagmi',
@@ -40,7 +40,7 @@ export const MY_STACK = {
         },
         {
             name: 'Web3.js',
-            icon: 'https://web3js.readthedocs.io/en/v1.8.0/_static/web3js.svg',
+            icon: 'https://seeklogo.com/images/W/web3js-logo-62DEE79B50-seeklogo.com.png',
         },
         {
             name: 'MetaMask',
@@ -62,7 +62,7 @@ export const MY_STACK = {
         },
         {
             name: 'RainbowKit',
-            icon: 'https://rainbowkit.com/rainbow.svg',
+            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
         },
         {
             name: 'Tailwind CSS',
@@ -70,7 +70,7 @@ export const MY_STACK = {
         },
         {
             name: 'Framer Motion',
-            icon: 'https://cdn.worldvectorlogo.com/logos/framer-motion.svg',
+            icon: 'https://www.framer.com/images/favicons/favicon.svg',
         },
     ],
     'mobile & backend': [
@@ -98,19 +98,19 @@ export const MY_STACK = {
     'defi & protocols': [
         {
             name: 'Uniswap',
-            icon: 'https://cryptologos.cc/logos/uniswap-uni-logo.svg',
+            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/dapps/app.uniswap.org.png',
         },
         {
             name: 'AAVE',
-            icon: 'https://cryptologos.cc/logos/aave-aave-logo.svg',
+            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/dapps/aave.com.png',
         },
         {
             name: 'Chainlink',
-            icon: 'https://cryptologos.cc/logos/chainlink-link-logo.svg',
+            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png',
         },
         {
             name: 'Polygon',
-            icon: 'https://cryptologos.cc/logos/polygon-matic-logo.svg',
+            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/info/logo.png',
         },
     ],
     'tools & infrastructure': [
@@ -124,11 +124,11 @@ export const MY_STACK = {
         },
         {
             name: 'IPFS',
-            icon: 'https://docs.ipfs.tech/images/ipfs-logo.svg',
+            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
         },
         {
             name: 'The Graph',
-            icon: 'https://thegraph.com/favicon.svg',
+            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc944E90C64B2c07662A292be6244BDf05Cda44a7/logo.png',
         },
     ],
 };

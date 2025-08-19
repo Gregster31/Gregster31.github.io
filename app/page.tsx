@@ -6,7 +6,7 @@ import ProjectList from './_components/ProjectList';
 
 export default function Home() {
     return (
-        <div className="page-">
+        <div className="page- space-y-0">
             <Banner />
             <AboutMe />
             <Experiences />

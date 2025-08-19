@@ -1,9 +1,11 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { MoveUpRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { GENERAL_INFO, SOCIAL_LINKS } from '@/lib/data';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const COLORS = [
     'bg-yellow-500 text-black',
@@ -34,6 +36,45 @@ const MENU_LINKS = [
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
+    const resumeButtonRef = useRef<HTMLAnchorElement>(null);
+
+    // Mouse attraction animation for resume button
+    useGSAP(() => {
+        const resumeButton = resumeButtonRef.current;
+        if (!resumeButton) return;
+
+        const handleMouseMove = (e: MouseEvent) => {
+            const rect = resumeButton.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const distance = Math.sqrt(
+                Math.pow(e.clientX - centerX, 2) + Math.pow(e.clientY - centerY, 2)
+            );
+            
+            if (distance < 100) {
+                const attraction = Math.max(0, 100 - distance) / 100;
+                const moveX = (e.clientX - centerX) * attraction * 0.3;
+                const moveY = (e.clientY - centerY) * attraction * 0.3;
+                
+                gsap.to(resumeButton, {
+                    x: moveX,
+                    y: moveY,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            } else {
+                gsap.to(resumeButton, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    });
 
     return (
         <>
@@ -84,7 +125,7 @@ const Navbar = () => {
             >
                 <div
                     className={cn(
-                        'fixed inset-0 scale-150 translate-x-1/2 rounded-[50%] bg-background-light duration-700 delay-150 z-[-1]',
+                        'fixed inset-0 scale-150 translate-x-1/2 rounded-[50%] bg-[#d94f2c] duration-700 delay-150 z-[-1]',
                         {
                             'translate-x-0': isMenuOpen,
                         },
@@ -94,7 +135,7 @@ const Navbar = () => {
                 <div className="grow flex md:items-center w-full max-w-[300px] mx-8 sm:mx-auto">
                     <div className="flex gap-10 lg:justify-between max-lg:flex-col w-full">
                         <div className="max-lg:order-2">
-                            <p className="text-muted-foreground mb-5 md:mb-8">
+                            <p className="text-white/80 mb-5 md:mb-8">
                                 SOCIAL
                             </p>
                             <ul className="space-y-3">
@@ -104,16 +145,27 @@ const Navbar = () => {
                                             href={link.url}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-lg capitalize hover:underline"
+                                            className="text-lg capitalize hover:underline text-white"
                                         >
                                             {link.name}
                                         </a>
                                     </li>
                                 ))}
+                                <li>
+                                    <a
+                                        ref={resumeButtonRef}
+                                        href={GENERAL_INFO.resumeUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-lg capitalize hover:underline text-white inline-block"
+                                    >
+                                        Resume
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div className="">
-                            <p className="text-muted-foreground mb-5 md:mb-8">
+                            <p className="text-white/80 mb-5 md:mb-8">
                                 MENU
                             </p>
                             <ul className="space-y-3">
@@ -124,7 +176,7 @@ const Navbar = () => {
                                                 router.push(link.url);
                                                 setIsMenuOpen(false);
                                             }}
-                                            className="group text-xl flex items-center gap-3"
+                                            className="group text-xl flex items-center gap-3 text-white"
                                         >
                                             <span
                                                 className={cn(
@@ -147,8 +199,8 @@ const Navbar = () => {
                 </div>
 
                 <div className="w-full max-w-[300px] mx-8 sm:mx-auto">
-                    <p className="text-muted-foreground mb-4">GET IN TOUCH</p>
-                    <a href={`mailto:${GENERAL_INFO.email}`}>
+                    <p className="text-white/80 mb-4">GET IN TOUCH</p>
+                    <a href={`mailto:${GENERAL_INFO.email}`} className="text-white">
                         {GENERAL_INFO.email}
                     </a>
                 </div>

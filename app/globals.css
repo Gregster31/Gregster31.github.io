@@ -80,14 +80,13 @@
         @apply bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent;
     }
     
-    /* Glowing effect for primary elements */
+    /* Removed glowing effect for primary elements */
     .glow-orange {
-        box-shadow: 0 0 20px rgba(212, 74, 43, 0.3);
+        /* Removed box-shadow */
     }
     
-    /* Enhanced button hover effects */
+    /* Enhanced button hover effects without glow */
     .button-glow:hover {
-        box-shadow: 0 0 30px rgba(212, 74, 43, 0.5);
         transform: translateY(-2px);
     }
 }
