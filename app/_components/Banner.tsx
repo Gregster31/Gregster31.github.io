@@ -10,6 +10,47 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Banner = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
+    const resumeButtonRef = React.useRef<HTMLAnchorElement>(null);
+
+    // Mouse attraction effect for resume button
+    useGSAP((context, contextSafe) => {
+        if (!resumeButtonRef.current || window.innerWidth < 768) return;
+
+        const handleMouseMove = contextSafe?.((e: MouseEvent) => {
+            const button = resumeButtonRef.current;
+            if (!button) return;
+
+            const rect = button.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const distance = Math.sqrt(
+                Math.pow(e.clientX - centerX, 2) + Math.pow(e.clientY - centerY, 2)
+            );
+            
+            if (distance < 200) {
+                const attraction = Math.max(0, 200 - distance) / 200;
+                const moveX = (e.clientX - centerX) * attraction * 0.5;
+                const moveY = (e.clientY - centerY) * attraction * 0.5;
+                
+                gsap.to(button, {
+                    x: moveX,
+                    y: moveY,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            } else {
+                gsap.to(button, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+            }
+        }) as any;
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
 
     // move the content a little up on scroll
     useGSAP(
@@ -38,45 +79,51 @@ const Banner = () => {
                 className="container h-[100svh] min-h-[530px] max-md:pb-10 flex items-center max-md:flex-col relative"
                 ref={containerRef}
             >
-                <div className="w-full relative">
-                    {/* Left side - Title and Description (positioned higher) */}
-                    <div className="max-w-[600px] mb-20">
-                        <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
+                <div className="w-full relative flex flex-col h-full justify-between">
+                    {/* Left side - Title and Description (at the top) */}
+<div className="flex flex-col justify-start pt-32 md:pt-48">
+                        <h1 className="banner-title slide-up-and-fade leading-[.95] text-5xl sm:text-6xl md:text-7xl mb-6">
                             <span className="text-primary">BLOCKCHAIN</span>
-                            <br /> <span className="gradient-text">DEVELOPER</span>
+                            <br />
+                            <span className="text-white">DEVELOPER</span>
                         </h1>
-                        <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground leading-relaxed">
-                            Hi! I&apos;m Julien Halde, a 20-year-old Blockchain Developer studying Computer Science at Concordia University. 
-                            I specialize in building decentralized applications, smart contracts, and Web3 solutions that push the boundaries of what&apos;s possible.
+                        <p className="banner-description slide-up-and-fade text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-md">
+                            Hi! I'm Julien, a Blockchain Developer with hands-on experience building smart contracts, 
+                            DeFi platforms, and Web3 apps across Ethereum, Polkadot, and Layer 2 networks.
                         </p>
-                        <div className="flex gap-4 mt-9 slide-up-and-fade">
-                            <Button
-                                as="link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={GENERAL_INFO.resumeUrl}
-                                variant="primary"
-                                className="banner-button button-glow"
-                            >
-                                RESUME
-                            </Button>
+                        <div className="slide-up-and-fade">
+                        <a
+                            href={GENERAL_INFO.resumeUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="banner-button button-glow inline-flex items-center justify-center h-12 px-8 bg-primary text-black font-medium uppercase tracking-widest rounded-2xl transition-all hover:bg-primary/90"
+                            ref={resumeButtonRef}
+                        >
+                            RESUME
+                        </a>
                         </div>
                     </div>
 
-                    {/* Right side - Smart Contract Code Section (positioned much lower) */}
-                    <div className="absolute bottom-0 right-0 max-w-[500px] slide-up-and-fade max-md:relative max-md:bottom-auto max-md:right-auto max-md:mt-8">
-                        <div className="text-sm text-muted-foreground font-mono">
-                            <div className="text-primary">contract GeniePay &#123;</div>
-                            <div className="ml-4 leading-relaxed text-base">
-                                <div className="text-green-400">// Instant crypto payroll for 1000+ employees</div>
-                                <div><span className="text-blue-400">mapping</span>(<span className="text-yellow-400">address</span><span className="text-yellow-400">uint256</span>) <span className="text-white">salaries</span>;</div>
-                                <div><span className="text-purple-400">function</span> <span className="text-cyan-400">batchPayout</span>() <span className="text-red-400">external</span> &#123;</div>
-                                <div className="ml-4 text-green-400">// Smart contract magic happens here ✨</div>
-                                <div>&#125;</div>
+                {/* Right side - Smart Contract Code Section */}
+                <div className="flex flex-col justify-end pb-8 md:pb-16 md:items-end">
+                <div className="slide-up-and-fade max-w-md md:max-w-lg">
+                    <div className="text-sm md:text-base text-muted-foreground">
+                    <div className="text-primary">contract Julien &#123;</div>
+                    <div className="ml-4 leading-relaxed">
+                            <div>
+                            <span className="text-blue-400">mapping</span>(<span className="text-yellow-400">string</span> =&gt; <span className="text-yellow-400">string</span>) <span className="text-white">languagesSpoken</span> = &#123;
+                                "English": "Fluent",
+                                "French": "Fluent",
+                                "Spanish": "Beginner"
+                            &#125;;
                             </div>
-                            <div className="text-primary">&#125;</div>
-                        </div>
+                        <div><span className="text-blue-400">string[]</span> <span className="text-white">softSkills</span> = ["Leadership", "Collaboration", "Problem-Solving", "Adaptability"];</div>
+
                     </div>
+                    <div className="text-primary">&#125;</div>
+                    </div>
+                </div>
+                </div>
                 </div>
             </div>
         </section>

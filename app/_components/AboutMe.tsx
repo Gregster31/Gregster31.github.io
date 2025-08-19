@@ -55,14 +55,13 @@ const AboutMe = () => {
         <section className="pt-2 pb-16" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade leading-tight">
-                    From smart contracts to DeFi protocols, I architect 
-                    <span className="text-primary font-medium"> decentralized solutions</span> that 
-                    transform traditional systems. Every line of Solidity I write brings us closer to a 
-                    trustless, transparent future.
+                I'm <span className="line-through">passionate</span> obsessed about blockchain and building the next generation of 
+                <span className="text-primary font-medium"> decentralized systems</span>, 
+                staying at the forefront of innovation as technology reshapes finance and trust.
                 </h2>
 
                 <p className="pb-3 border-b border-primary/20 text-muted-foreground slide-up-and-fade">
-                    Building the Web3 revolution, one block at a time.
+                    About me
                 </p>
 
                 <div className="grid md:grid-cols-12 mt-9 gap-8">
@@ -81,17 +80,15 @@ const AboutMe = () => {
                             </p>
                             <p className="mt-4 slide-up-and-fade leading-relaxed">
                                 A 20-year-old developer from Montreal, specialized in Ethereum development,
-                                React frontends, and mobile applications. Winner of John Abbott Hackathon
-                                and creator of GeniePay - a crypto payroll platform processing 1000+ 
-                                employee payments in a single transaction.
-                            </p>
-                            <p className="mt-4 slide-up-and-fade leading-relaxed">
-                                From reverse-engineering Android SDKs at ChargeHub to translating 
-                                Ethereum documentation for the French community, I bridge the gap 
+                                React frontends, and mobile applications. Hackathon Winner
+                                and creator of GeniePay, I bridge the gap 
                                 between complex blockchain technology and user-friendly experiences.
                             </p>
                             <p className="mt-4 slide-up-and-fade leading-relaxed">
-                                <span className="text-primary font-medium">I CAN&apos;T STOP BUILDING ON THE BLOCKCHAIN</span>
+                                
+                            </p>
+                            <p className="mt-4 slide-up-and-fade leading-relaxed">
+                                <span className="text-primary font-medium">BUILDING the WEB3 REVOLUTION, ONE BLOCK AT A TIME</span>
                             </p>
                         </div>
                     </div>
