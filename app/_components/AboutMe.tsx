@@ -65,34 +65,63 @@ const AboutMe = () => {
                 </p>
 
                 <div className="grid md:grid-cols-12 mt-9 gap-8">
-                    <div className="md:col-span-5">
-                        <p className="text-5xl slide-up-and-fade gradient-text">
-                            I&apos;m Julien
-                        </p>
-                    </div>
-                    <div className="md:col-span-7">
-                        <div className="text-lg text-muted-foreground max-w-[500px] space-y-4">
-                            <p className="slide-up-and-fade leading-relaxed">
-                                Blockchain developer with a passion for creating
-                                innovative DeFi solutions and smart contract architectures.
-                                Currently pursuing Computer Science at Concordia University
-                                while building production-ready Web3 applications.
-                            </p>
-                            <p className="mt-4 slide-up-and-fade leading-relaxed">
-                                A 20-year-old developer from Montreal, specialized in Ethereum development,
-                                React frontends, and mobile applications. Hackathon Winner
-                                and creator of GeniePay, I bridge the gap 
-                                between complex blockchain technology and user-friendly experiences.
-                            </p>
-                            <p className="mt-4 slide-up-and-fade leading-relaxed">
-                                
-                            </p>
-                            <p className="mt-4 slide-up-and-fade leading-relaxed">
-                                <span className="text-primary font-medium">BUILDING the WEB3 REVOLUTION, ONE BLOCK AT A TIME</span>
-                            </p>
-                        </div>
+                {/* Julien Name */}
+                <div className="md:col-span-5">
+                    <p className="text-5xl slide-up-and-fade gradient-text">
+                    I&apos;m Julien
+                    </p>
+                </div>
+
+                {/* First two paragraphs */}
+                <div className="md:col-span-7">
+                    <div className="text-lg text-muted-foreground max-w-[500px] space-y-4">
+                    <p className="slide-up-and-fade leading-relaxed shimmer-text">
+                        Blockchain developer obsessed with designing innovative DeFi solutions and 
+                        building smart contract architectures that scale. Currently pursuing Computer Science 
+                        at Concordia University while shipping production-ready Web3 applications.
+                    </p>
+
+                    <p className="mt-4 slide-up-and-fade leading-relaxed shimmer-text">
+                        Based in Montreal, I’m a 20-year-old developer specialized in Ethereum, React frontends, 
+                        and mobile apps. Hackathon winner and creator of <span className="font-semibold">GeniePay</span>, 
+                        I bridge the gap between complex blockchain technology and intuitive user experiences.
+                    </p>
                     </div>
                 </div>
+
+                {/* Last paragraph spanning both columns and centered */}
+                <div className="md:col-span-12 mt-8 text-center">
+                <p className="slide-up-and-fade leading-relaxed text-2xl md:text-4xl font-semibold tracking-wide">
+                    <span className="text-primary block">
+                    Building the Web3 revolution, one block at a time
+                    </span>
+                </p>
+                </div>
+
+                <style jsx>{`
+                    .shimmer-text {
+                    position: relative;
+                    color: #9ca3af; /* gray text */
+                    background: linear-gradient(
+                        90deg,
+                        #9ca3af 0%,
+                        #d1d5db 40%, /* light gray shimmer */
+                        #9ca3af 80%
+                    );
+                    background-size: 200% 100%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: shimmer 6s ease-in-out infinite;
+                    animation-delay: 1s;
+                    }
+
+                    @keyframes shimmer {
+                    0% { background-position: 200% 0; }
+                    100% { background-position: -200% 0; }
+                    }
+                `}</style>
+                </div>
+
             </div>
         </section>
     );

@@ -2,8 +2,7 @@ import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
     email: 'julien.halde31@proton.me',
-
-    resumeUrl: '/Julien_Halde_Resume.pdf', // Fixed path to public folder
+    resumeUrl: '/Julien_Halde_Resume.pdf',
     githubProfile: 'https://github.com/julien-halde',
 };
 
@@ -16,15 +15,15 @@ export const MY_STACK = {
     'blockchain & smart contracts': [
         {
             name: 'Solidity',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Solidity-Dark.svg',
         },
         {
             name: 'Ethereum',
-            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Ethereum-Dark.svg',
         },
         {
             name: 'Hardhat',
-            icon: 'https://hardhat.org/hardhat-logo.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Hardhat-Dark.svg',
         },
         {
             name: 'Wagmi',
@@ -36,99 +35,91 @@ export const MY_STACK = {
         },
         {
             name: 'OpenZeppelin',
-            icon: 'https://docs.openzeppelin.com/img/logo.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/OpenZeppelin-Dark.svg',
         },
         {
             name: 'Web3.js',
-            icon: 'https://seeklogo.com/images/W/web3js-logo-62DEE79B50-seeklogo.com.png',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Web3js-Dark.svg',
         },
         {
             name: 'MetaMask',
-            icon: 'https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/MetaMask-Dark.svg',
         },
     ],
     'frontend & web3 ui': [
         {
             name: 'React',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/React-Dark.svg',
         },
         {
             name: 'TypeScript',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/TypeScript.svg',
         },
         {
             name: 'Next.js',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/NextJS-Dark.svg',
         },
         {
             name: 'RainbowKit',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/RainbowKit-Dark.svg',
         },
         {
             name: 'Tailwind CSS',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/TailwindCSS-Dark.svg',
         },
         {
             name: 'Framer Motion',
-            icon: 'https://www.framer.com/images/favicons/favicon.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Framer-Dark.svg',
         },
     ],
     'mobile & backend': [
         {
             name: 'Kotlin',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Kotlin-Dark.svg',
         },
         {
             name: 'Swift',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Swift.svg',
         },
         {
             name: 'Node.js',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/NodeJS-Dark.svg',
         },
         {
             name: 'Firebase',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Firebase-Dark.svg',
         },
         {
             name: 'PostgreSQL',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/PostgreSQL-Dark.svg',
         },
     ],
     'defi & protocols': [
         {
             name: 'Uniswap',
-            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/dapps/app.uniswap.org.png',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Uniswap-Dark.svg',
         },
         {
             name: 'AAVE',
-            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/dapps/aave.com.png',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Aave-Dark.svg',
         },
         {
             name: 'Chainlink',
-            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Chainlink-Dark.svg',
         },
         {
             name: 'Polygon',
-            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/info/logo.png',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Polygon-Dark.svg',
         },
     ],
     'tools & infrastructure': [
         {
             name: 'Git',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Git.svg',
         },
         {
             name: 'Docker',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-        },
-        {
-            name: 'IPFS',
-            icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-        },
-        {
-            name: 'The Graph',
-            icon: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc944E90C64B2c07662A292be6244BDf05Cda44a7/logo.png',
+            icon: 'https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Docker.svg',
         },
     ],
 };

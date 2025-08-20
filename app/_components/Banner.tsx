@@ -5,6 +5,8 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
+import { Flag, Brain, Globe, Users, BookOpen } from "lucide-react";
+
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -81,16 +83,44 @@ const Banner = () => {
             >
                 <div className="w-full relative flex flex-col h-full justify-between">
                     {/* Left side - Title and Description (at the top) */}
-<div className="flex flex-col justify-start pt-32 md:pt-48">
+                        <div className="flex flex-col justify-start pt-32 md:pt-48">
                         <h1 className="banner-title slide-up-and-fade leading-[.95] text-5xl sm:text-6xl md:text-7xl mb-6">
                             <span className="text-primary">BLOCKCHAIN</span>
                             <br />
                             <span className="text-white">DEVELOPER</span>
                         </h1>
-                        <p className="banner-description slide-up-and-fade text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-md">
-                            Hi! I'm Julien, a Blockchain Developer with hands-on experience building smart contracts, 
-                            DeFi platforms, and Web3 apps across Ethereum, Polkadot, and Layer 2 networks.
+                        <p className="banner-description slide-up-and-fade text-base md:text-lg text-gray-400 leading-relaxed mb-8 max-w-md shimmer-text">
+                        Hi! I'm Julien, a Blockchain Developer with experience building smart contracts, 
+                        DeFi platforms, and Web3 apps across Ethereum, Polkadot, and Layer 2 networks.
                         </p>
+
+                        <style jsx>{`
+                        .shimmer-text {
+                            position: relative;
+                            color: #9ca3af; /* gray text */
+                            background: linear-gradient(
+                            90deg,
+                            #9ca3af 0%,
+                            #d1d5db 40%, /* lighter gray shimmer */
+                            #9ca3af 80%
+                            );
+                            background-size: 200% 100%;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            animation: shimmer 6s ease-in-out infinite; /* slower, gentle */
+                            animation-delay: 1s; /* small initial delay */
+                        }
+
+                        @keyframes shimmer {
+                            0% {
+                            background-position: 200% 0;
+                            }
+                            100% {
+                            background-position: -200% 0;
+                            }
+                        }
+                        `}</style>
+
                         <div className="slide-up-and-fade">
                         <a
                             href={GENERAL_INFO.resumeUrl}
@@ -107,21 +137,24 @@ const Banner = () => {
                 {/* Right side - Smart Contract Code Section */}
                 <div className="flex flex-col justify-end pb-8 md:pb-16 md:items-end">
                 <div className="slide-up-and-fade max-w-md md:max-w-lg">
-                    <div className="text-sm md:text-base text-muted-foreground">
-                    <div className="text-primary">contract Julien &#123;</div>
-                    <div className="ml-4 leading-relaxed">
-                            <div>
-                            <span className="text-blue-400">mapping</span>(<span className="text-yellow-400">string</span> =&gt; <span className="text-yellow-400">string</span>) <span className="text-white">languagesSpoken</span> = &#123;
-                                "English": "Fluent",
-                                "French": "Fluent",
-                                "Spanish": "Beginner"
-                            &#125;;
-                            </div>
-                        <div><span className="text-blue-400">string[]</span> <span className="text-white">softSkills</span> = ["Leadership", "Collaboration", "Problem-Solving", "Adaptability"];</div>
-
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
+                {[
+                    { skill: "English", icon: <Flag className="w-8 h-8 text-amber-500" /> },
+                    { skill: "French", icon: <Flag className="w-8 h-8 text-amber-500" /> },
+                    { skill: "Problem-Solving", icon: <Brain className="w-8 h-8 text-amber-500" /> },
+                    { skill: "Adaptability", icon: <Globe className="w-8 h-8 text-amber-500" /> },
+                    { skill: "Collaboration", icon: <Users className="w-8 h-8 text-amber-500" /> },
+                    { skill: "Self-Learning", icon: <BookOpen className="w-8 h-8 text-amber-500" /> },
+                ].map(({ skill, icon }) => (
+                    <div
+                    key={skill}
+                    className="flex flex-col items-center bg-black/90 border border-[#d44a2b] rounded-2xl p-4 shadow-lg hover:scale-105 transition-transform"
+                    >
+                    <div>{icon}</div>
+                    <div className="mt-2 text-white font-semibold">{skill}</div>
                     </div>
-                    <div className="text-primary">&#125;</div>
-                    </div>
+                ))}
+                </div>
                 </div>
                 </div>
                 </div>
