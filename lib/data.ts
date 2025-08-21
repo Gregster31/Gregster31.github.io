@@ -130,11 +130,11 @@ export const PROJECTS: IProject[] = [
         slug: 'geniepay',
         year: 2025,
         description: `
-        <strong>Revolutionary Crypto Payroll Platform</strong><br/><br/>
-
+        <strong>Crypto Payroll Platform</strong><br/><br/>
+        
         GeniePay is a decentralized payroll solution that transforms traditional HR operations by enabling instant, fully compliant crypto payments to employees and contractors worldwide. Unlike traditional payroll systems, GeniePay is free to use, requires no account setup, and supports multiple cryptocurrencies for seamless global payouts.<br/><br/>
-
-        🚀 <strong>Core Innovations:</strong><br/>
+        
+        🚀 <strong>Core Features:</strong><br/>
         <ul>
         <li><strong>Mass Payroll with Smart Contracts:</strong> Send 1000+ employee payouts in a single transaction, removing friction and delays</li>
         <li><strong>Multi-Currency Support:</strong> Pay in stablecoins or fiat, with automatic conversion rates</li>
@@ -145,7 +145,7 @@ export const PROJECTS: IProject[] = [
         </ul>
         `,
         role: `
-        <strong>Lead Protocol Developer & Full-Stack Engineer</strong><br/><br/>
+        <strong>Founder & Solo Dev</strong><br/><br/>
         
         🔧 <strong>Technical Leadership:</strong><br/>
         <ul>
@@ -183,15 +183,15 @@ export const PROJECTS: IProject[] = [
             'MetaMask',
             'Sepolia Testnet'
         ],
-        thumbnail: '/projects/thumbnail/geniepay.webp',
-        longThumbnail: '/projects/long/geniepay.webp',
+        thumbnail: '/projects/thumbnail/geniepay-thumbnail.png',
+        longThumbnail: '/projects/thumbnail/geniepay-thumbnail.png',
         images: [
-            '/projects/images/geniepay-1.webp',
-            '/projects/images/geniepay-2.webp',
-            '/projects/images/geniepay-3.webp'
+            '/projects/images/geniepay-1.png',
+            '/projects/images/geniepay-2.png',
+            '/projects/images/geniepay-3.png'
         ],
-        liveUrl: 'https://geniepay-protocol.vercel.app',
         sourceCode: 'https://github.com/Gregster31/GeniePay',
+        liveUrl: 'https://www.youtube.com/watch?v=srOUt_pADQg',
     },
     {
         title: 'BlockVote',
@@ -199,9 +199,9 @@ export const PROJECTS: IProject[] = [
         year: 2025,
         description: `
         <strong>Blockchain Voting DApp</strong><br/><br/>
-
+        
         BlockVote is a secure, on-chain voting platform built to ensure tamper-proof elections for DAOs, hackathons, and small-scale governance projects. Developed during the Easy-A Hackathon and recognized at Consensus 2025 (Toronto), the DApp demonstrates how blockchain can enforce one-person-one-vote elections with complete transparency.<br/><br/>
-
+        
         🏆 <strong>Core Features:</strong><br/>
         <ul>
         <li><strong>One-Person-One-Vote:</strong> Each Ethereum address can vote only once, enforced on-chain</li>
@@ -214,7 +214,7 @@ export const PROJECTS: IProject[] = [
         `,
         role: `
         <strong>Solo Developer & Smart Contract Architect</strong><br/><br/>
-
+        
         🔧 <strong>Development Highlights:</strong><br/>
         <ul>
         <li>Designed and deployed Solidity smart contracts to handle voting logic and candidate listings</li>
@@ -223,7 +223,7 @@ export const PROJECTS: IProject[] = [
         <li>Created real-time dashboards displaying votes and election statistics</li>
         <li>Implemented rigorous testing and deployment via Hardhat and Sepolia testnet</li>
         </ul><br/>
-
+        
         🎯 <strong>Impact & Recognition:</strong><br/>
         <ul>
         <li>Winner of "Most Innovative DApp" award at Consensus 2025 Toronto Hackathon</li>
@@ -242,15 +242,14 @@ export const PROJECTS: IProject[] = [
             'MetaMask',
             'Ethereum (Sepolia)',
         ],
-        thumbnail: '/projects/thumbnail/decentralvote.webp',
-        longThumbnail: '/projects/long/decentralvote.webp',
+        thumbnail: '/projects/thumbnail/blockvote-thumbnail.png',
+        longThumbnail: '/projects/long/blockvote-thumbnail.png',
         images: [
-            '/projects/images/decentralvote-1.webp',
-            '/projects/images/decentralvote-2.webp',
-            '/projects/images/decentralvote-3.webp',
+            '/projects/images/blockvote-1.png',
+            '/projects/images/blockvote-2.png',
         ],
         sourceCode: 'https://github.com/Gregster31/BlockVote',
-        liveUrl: 'https://decentralvote.vercel.app',
+        liveUrl: 'https://www.youtube.com/watch?v=j6zuWR3-y0A',
     },
 ];
 

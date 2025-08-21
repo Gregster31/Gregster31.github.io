@@ -40,7 +40,6 @@ const CustomCursor = () => {
 
         const handleElementHover = contextSafe?.((e: MouseEvent) => {
             const target = e.target;
-            if (!target || target.nodeType !== 1) return; // Only Element nodes
             
             const element = target as HTMLElement;
             const tagName = element.tagName.toLowerCase();
