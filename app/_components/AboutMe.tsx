@@ -82,8 +82,8 @@ const AboutMe = () => {
                     </p>
 
                     <p className="mt-4 slide-up-and-fade leading-relaxed shimmer-text">
-                        Based in Montreal, I’m a 20-year-old developer specialized in Ethereum, React frontends, 
-                        and mobile apps. Hackathon winner and creator of <span className="font-semibold">GeniePay</span>, 
+                        Based in Montreal, I'm a 20-year-old developer specialized in Ethereum, React frontends, 
+                        and mobile apps. Hackathon winner and founder of <span className="font-semibold">GeniePay</span>, 
                         I bridge the gap between complex blockchain technology and intuitive user experiences.
                     </p>
                     </div>
