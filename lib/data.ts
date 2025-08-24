@@ -247,7 +247,7 @@ export const MY_EXPERIENCE = [
         company: 'ChargeHub',
         duration: 'Winter 2025 - Present',
         description: [
-            "Participated in mobile integration for one of North America's largest EV charging networks with 300K+ users",
+            "Participated in mobile integration for one of North America's largest EV charging networks with 350K+ users",
             "Built Android features using Kotlin (Jetpack Compose) and iOS features with Swift (UIKit & SwiftUI)",
             "Reverse-engineered Android SDKs to identify and document critical security vulnerabilities",
             "Improved the bug-reporting system, completely eliminating empty user submissions",
@@ -255,7 +255,7 @@ export const MY_EXPERIENCE = [
         ]
     },
     {
-        title: 'Blockchain Translator & Developer',
+        title: 'Blockchain Translator',
         company: 'Ethereum Foundation',
         duration: 'Summer 2025',
         description: [

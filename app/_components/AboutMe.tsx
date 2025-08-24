@@ -55,9 +55,9 @@ const AboutMe = () => {
         <section className="pt-2 pb-16" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade leading-tight">
-                I'm <span className="line-through">passionate</span> obsessed about blockchain and building the next generation of 
-                <span className="text-primary font-medium"> decentralized systems</span>, 
-                staying at the forefront of innovation as technology reshapes finance and trust.
+                The first decade of blockchain was about proving the concept, 
+                the next will be about proving 
+                <span className="text-primary font-medium"> real utility at scale</span>.
                 </h2>
 
                 <p className="pb-3 border-b border-primary/20 text-muted-foreground slide-up-and-fade">

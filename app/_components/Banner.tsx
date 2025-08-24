@@ -76,11 +76,12 @@ const Banner = () => {
     );
 
     return (
-        <section className="relative overflow-hidden" id="banner">
+            <section className="relative overflow-hidden" id="banner">
             <div
-                className="container h-[100svh] min-h-[530px] max-md:pb-10 flex items-center max-md:flex-col relative"
+                className="container min-h-screen max-md:pb-10 flex items-center max-md:flex-col relative"
                 ref={containerRef}
             >
+
                 <div className="w-full relative flex flex-col h-full justify-between">
                     {/* Left side - Title and Description (at the top) */}
                         <div className="flex flex-col justify-start pt-32 md:pt-48">
