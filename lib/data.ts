@@ -259,7 +259,7 @@ export const MY_EXPERIENCE = [
         company: 'Ethereum Foundation',
         duration: 'Summer 2025',
         description: [
-            'Translated 1,500+ words of Ethereum documentation into French',
+            'Translated 4,000+ words of Ethereum documentation into French',
             'Contributed to developer tooling improvements and documentation standards',
             'Participated in Ethereum Community Conference as technical content reviewer',
         ]
@@ -271,7 +271,7 @@ export const MY_EXPERIENCE = [
         description: [
             'Managed team of 15 coaches and 120+ competitive swimmers with $30K seasonal budget',
             'Organized regional-level competitions with 500+ participants',
-            'Led facility expansion project resulting in 20% increase in membership',
+            'Led the club to a 20% increase in membership',
         ]
     },
 ];
