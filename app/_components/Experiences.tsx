@@ -67,7 +67,7 @@ const Experiences = () => {
                                     <p className="text-4xl md:text-5xl font-anton leading-none mt-2 mb-2">
                                         {item.title}
                                     </p>
-                                    <p className="text-lg text-muted-foreground">
+                                    <p className="text-lg text-gray-300">
                                         {item.duration}
                                     </p>
                                 </div>
@@ -77,7 +77,7 @@ const Experiences = () => {
                                 <div className="mt-6">
                                     <ul className="space-y-3">
                                         {item.description.map((desc, index) => (
-                                            <li key={index} className="flex items-start gap-3 text-muted-foreground">
+                                            <li key={index} className="flex items-start gap-3 text-gray-300">
                                                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
                                                 <span className="leading-relaxed">{desc}</span>
                                             </li>

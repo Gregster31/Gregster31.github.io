@@ -245,7 +245,7 @@ export const MY_EXPERIENCE = [
     {
         title: 'Software Developer',
         company: 'ChargeHub',
-        duration: 'Winter 2025 - Present',
+        duration: 'Winter 2025 - Summer 2025',
         description: [
             "Participated in mobile integration for one of North America's largest EV charging networks with 350K+ users",
             "Built Android features using Kotlin (Jetpack Compose) and iOS features with Swift (UIKit & SwiftUI)",
@@ -261,7 +261,6 @@ export const MY_EXPERIENCE = [
         description: [
             'Translated 4,000+ words of Ethereum documentation into French',
             'Contributed to developer tooling improvements and documentation standards',
-            'Participated in Ethereum Community Conference as technical content reviewer',
         ]
     },
     {
