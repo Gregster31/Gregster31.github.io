@@ -118,15 +118,14 @@ const ProjectList = () => {
                                 <Image
                                     src={project.thumbnail}
                                     alt="Project"
-                                    width="400"
-                                    height="500"
+                                    width={1200}
+                                    height={600}
                                     className={cn(
-                                        'absolute inset-0 transition-all duration-500 w-full h-full object-cover',
+                                        "absolute inset-0 transition-opacity duration-500 w-full h-full object-contain bg-transparent",
                                         {
-                                            'opacity-0':
-                                                project.slug !==
-                                                selectedProject,
-                                        },
+                                            "opacity-0": project.slug !== selectedProject,
+                                            "opacity-100": project.slug === selectedProject,
+                                        }
                                     )}
                                     ref={imageRef}
                                     key={project.slug}
